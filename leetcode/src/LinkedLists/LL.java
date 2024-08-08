@@ -1,4 +1,4 @@
-package reverseLinkedList;
+package LinkedLists;
 
 public class LL {
     public static ListNode arrayToList(int[] arr) {
