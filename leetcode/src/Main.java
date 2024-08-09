@@ -2,7 +2,9 @@ import LinkedLists.LL;
 import LinkedLists.ListNode;
 //import reverseLinkedList.Solution;
 //import mergeTwoSortedLists.Solution;
-import reorderLists.Solution;
+//import reorderLists.Solution;
+//import removeNthNodeFromEndOfList.Solution;
+import swapNodesInPairs.Solution;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,13 +33,33 @@ public class Main {
 
         // ==================================
         //reorderLists
-        Solution solution = new Solution();
-        int[] arr = new int[]{2,4,6,8,10};
-        ListNode root = LL.arrayToList(arr);
-        solution.reorderList(root);
-        LL.displayList(root);
+//        Solution solution = new Solution();
+//        int[] arr = new int[]{2,4,6,8,10};
+//        ListNode root = LL.arrayToList(arr);
+//        solution.reorderList(root);
+//        LL.displayList(root);
 
         // **********************************
+
+
+        // ==================================
+        //removeNthNodeFromEndOfList
+//        Solution solution = new Solution();
+//        int[] arr = new int[]{2,4,6,8,10};
+//        ListNode root = LL.arrayToList(arr);
+//        solution.removeNthFromEnd(root, 4);
+//        LL.displayList(root);
+
+        // **********************************
+
+        // ==================================
+        // swapNodesInPairs
+
+        Solution solution = new Solution();
+        int[] arr = new int[]{1,2,3,4,5,6};
+        ListNode root = LL.arrayToList(arr);
+        root = solution.swapPairs(root);
+        LL.displayList(root);
 
     }
 }
