@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -20,5 +19,14 @@ public class TestTrees {
         int[] arr = new int[]{1,2,3,4,5,6,7};
         TreeNode root = TreeHelper.convertListToTree(arr);
         Assert.assertEquals(solution.rightSideView(root), expected);
+    }
+
+    @Test
+    public void countGoodNodesInBinaryTree(){
+        countGoodNodesInBinaryTree.Solution solution = new countGoodNodesInBinaryTree.Solution();
+
+        int[] arr = new int[]{1,2,-1,3,4};
+        TreeNode root = TreeHelper.convertListToTree(arr);
+        Assert.assertEquals(solution.goodNodes(root), 4);
     }
 }
