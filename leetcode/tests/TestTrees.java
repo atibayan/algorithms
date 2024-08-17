@@ -29,4 +29,20 @@ public class TestTrees {
         TreeNode root = TreeHelper.convertListToTree(arr);
         Assert.assertEquals(solution.goodNodes(root), 4);
     }
+
+    @Test
+    public void lowestCommonAncestorBST(){
+
+        lowestCommonAncestorBST.Solution solution = new lowestCommonAncestorBST.Solution();
+
+        //[6,2,8,0,4,7,9,null,null,3,5] p=2 q=8
+        TreeNode root = new TreeNode(6,
+                new TreeNode(2, new TreeNode(0), new TreeNode(4, new TreeNode(3), new TreeNode(5))),
+                new TreeNode(8, new TreeNode(7), new TreeNode(9))
+        );
+
+        TreeNode p = new TreeNode(2);
+        TreeNode q = new TreeNode(8);
+        Assert.assertEquals(solution.lowestCommonAncestor(root, p, q).val, 6);
+    }
 }
